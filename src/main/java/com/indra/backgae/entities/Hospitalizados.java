@@ -15,11 +15,12 @@ public class Hospitalizados implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String fecha;
-    //private int año;
-    //private int año;
-    //private int mes;
+    private Date fecha;
+    private int año;
+    private String mes;
+    private int dia;
     private int hospitalizados_totales;
+    private int hospitalizados_totales_edomex;
     private int hospitalizados_totales_cdmx;
     private int camas_intubados_totales;
     private int camas_intubados_cdmx;
