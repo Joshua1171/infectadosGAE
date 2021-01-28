@@ -16,4 +16,19 @@ public class InfectadosServiceImpl implements IInfectadosService{
     public List<Hospitalizados> findAll() {
         return (List<Hospitalizados>) iInfectadosDao.findAll();
     }
+
+    @Override
+    public Hospitalizados findById(Long id) {
+        return iInfectadosDao.findById(id).orElse(null);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        iInfectadosDao.deleteById(id);
+    }
+
+    @Override
+    public Hospitalizados buscarPorId(Long id) {
+        return iInfectadosDao.findById(id).orElse(null);
+    }
 }
